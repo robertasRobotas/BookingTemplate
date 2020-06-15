@@ -2,24 +2,21 @@ import React from 'react';
 import { FacebookLoginButton, GoogleLoginButton } from '../../atoms';
 import styled from 'styled-components';
 import './Login.css';
+import Logo from '../../../assets/photos/logo.png';
 
 function Login() {
-  const Form = styled.div`
-    position: relative;
-    width: 50%;
-    height: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-  `;
-
   return (
     <div>
-      <img alt='lol' src={'../../../assets/photos/logo.png'} />
-      <Form>
-        <GoogleLoginButton />
+      <div className='logoWrapper'>
+        <img className='logo' alt='lol' src={Logo} />
+      </div>
 
+      <div className={'buttonWrapper'}>
+        <GoogleLoginButton />
+      </div>
+      <div className={'buttonWrapper'}>
         <FacebookLoginButton />
-      </Form>
+      </div>
     </div>
   );
 }

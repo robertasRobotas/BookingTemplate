@@ -1,0 +1,18 @@
+.logo {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+
+.logoWrapper {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+.buttonWrapper {
+  margin: auto;
+  width: 25%;
+  padding: 20px;
+  height: 45px;
+}
