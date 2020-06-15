@@ -1,6 +1,7 @@
 import React from 'react';
 import { FacebookLoginButton, GoogleLoginButton } from '../../atoms';
 import styled from 'styled-components';
+import './Login.css';
 
 function Login() {
   const Form = styled.div`
@@ -12,11 +13,14 @@ function Login() {
   `;
 
   return (
-    <Form>
-      <GoogleLoginButton />
+    <div>
+      <img alt='lol' src={'../../../assets/photos/logo.png'} />
+      <Form>
+        <GoogleLoginButton />
 
-      <FacebookLoginButton />
-    </Form>
+        <FacebookLoginButton />
+      </Form>
+    </div>
   );
 }
 
