@@ -1,6 +1,12 @@
 import React from 'react';
 import { Route, Router, Redirect } from 'react-router-dom';
-import { Login, Main, About, Contact } from './components/pages';
+import {
+  Login,
+  Main,
+  About,
+  Contact,
+  UserInformationForm,
+} from './components/pages';
 import { Spinner } from './components/atoms';
 import history from './history';
 import { observer } from 'mobx-react';
@@ -37,6 +43,11 @@ const Routes = ({ rootModel }) => {
           <PrivateRoute
             path='/contact'
             component={Contact}
+            rootModel={rootModel}
+          />
+          <PrivateRoute
+            path='/addInfo'
+            component={UserInformationForm}
             rootModel={rootModel}
           />
         </Router>
