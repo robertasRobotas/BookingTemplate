@@ -11,11 +11,13 @@ function Login() {
         <img className='logo' alt='lol' src={Logo} />
       </div>
 
-      <div className={'buttonWrapper'}>
-        <GoogleLoginButton />
-      </div>
-      <div className={'buttonWrapper'}>
-        <FacebookLoginButton />
+      <div className='socialContainer'>
+        <div className={'buttonWrapper'}>
+          <GoogleLoginButton />
+        </div>
+        <div className={'buttonWrapper'}>
+          <FacebookLoginButton />
+        </div>
       </div>
     </div>
   );
