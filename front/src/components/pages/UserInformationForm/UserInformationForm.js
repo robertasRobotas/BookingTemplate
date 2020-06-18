@@ -1,14 +1,16 @@
-import React from 'react';
-import Wrapper from '../../_hoc/Wrapper';
+import React, { useState } from 'react';
 import { observer } from 'mobx-react';
 import './UserInformationForm.css';
 
 const UserInformationForm = ({ history, location, rootModel }) => {
+  const [city, setCity] = useState('');
+  const [preferredSports, setPreferredSports] = useState([]);
+
   return (
     <>
       <div className='formContainer'>
         <form>
-          <label for='fname'>First Name</label>
+          <label>First Name</label>
           <input
             type='text'
             id='fname'
@@ -16,7 +18,7 @@ const UserInformationForm = ({ history, location, rootModel }) => {
             placeholder='Your name..'
           />
 
-          <label for='lname'>Last Name</label>
+          <label>Last Name</label>
           <input
             type='text'
             id='lname'
@@ -24,7 +26,7 @@ const UserInformationForm = ({ history, location, rootModel }) => {
             placeholder='Your last name..'
           />
 
-          <label for='country'>Country</label>
+          <label>Country</label>
           <select id='country' name='country'>
             <option value='australia'>Australia</option>
             <option value='canada'>Canada</option>
