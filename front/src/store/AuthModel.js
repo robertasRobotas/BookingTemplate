@@ -25,6 +25,8 @@ const Auth = types
           }
         );
 
+        console.log('userData', userData);
+
         self.user = {
           displayName: userData.data.user.displayName,
           id: userData.data.user.id,
