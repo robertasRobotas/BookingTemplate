@@ -3,35 +3,26 @@ import { observer } from 'mobx-react';
 import './UserInformationForm.css';
 
 const UserInformationForm = ({ history, location, rootModel }) => {
-  const [city, setCity] = useState('');
+  const [city, setCity] = useState('australia');
   const [preferredSports, setPreferredSports] = useState([]);
 
   return (
     <>
       <div className='formContainer'>
         <form>
-          <label>First Name</label>
-          <input
-            type='text'
-            id='fname'
-            name='firstname'
-            placeholder='Your name..'
-          />
-
-          <label>Last Name</label>
-          <input
-            type='text'
-            id='lname'
-            name='lastname'
-            placeholder='Your last name..'
-          />
-
-          <label>Country</label>
-          <select id='country' name='country'>
+          <div className='label'>City</div>
+          <select
+            onChange={(event) => setCity(event.target.value)}
+            value={city}
+            id='country'
+            name='country'
+            className='selectInput'>
             <option value='australia'>Australia</option>
             <option value='canada'>Canada</option>
             <option value='usa'>USA</option>
           </select>
+
+          <div className='label'>Favorite Sports</div>
 
           <input type='submit' value='Submit' />
         </form>
