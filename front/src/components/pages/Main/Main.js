@@ -4,6 +4,8 @@ import { observer } from 'mobx-react';
 import '../pages.css';
 
 const Main = ({ history, location, rootModel }) => {
+  console.log(rootModel);
+
   return (
     <>
       <Wrapper history={history} rootModel={rootModel} location={location}>
