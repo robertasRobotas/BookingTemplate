@@ -4,7 +4,9 @@ import { observer } from 'mobx-react';
 import '../pages.css';
 
 const Main = ({ history, location, rootModel }) => {
-  console.log(rootModel);
+  if (!rootModel.auth.user.city) {
+    history.push('/addInfo');
+  }
 
   return (
     <>
