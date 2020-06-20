@@ -1,0 +1,22 @@
+.selectBar {
+  background-color: red;
+  width: 90%;
+  height: 100px;
+  margin: auto;
+  margin-top: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  .selectBar {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .selectBar {
+    width: 600px;
+  }
+}

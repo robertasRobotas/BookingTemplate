@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { observer } from 'mobx-react';
 import './UserInformationForm.css';
-
+import { SelectItemsBar } from '../../organisms/';
 const UserInformationForm = ({ history, location, rootModel }) => {
   const [city, setCity] = useState('australia');
   const [preferredSports, setPreferredSports] = useState([]);
@@ -23,7 +23,7 @@ const UserInformationForm = ({ history, location, rootModel }) => {
           </select>
 
           <div className='label'>Favorite Sports</div>
-
+          <SelectItemsBar />
           <input type='submit' value='Submit' />
         </form>
       </div>
