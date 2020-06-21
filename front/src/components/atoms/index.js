@@ -6,6 +6,7 @@ import Spinner from './Spinner/Spinner';
 import BlankScreenToggle from './BlankScreenToggle/BlankScreenToggle';
 import GoogleLoginButton from './LoginButtons/GoogleLoginButton';
 import FacebookLoginButton from './LoginButtons/FacebookLoginButton';
+import SelectItem from './SelectItem/SelectItem';
 
 export {
   NavigationLink,
@@ -16,4 +17,5 @@ export {
   BlankScreenToggle,
   GoogleLoginButton,
   FacebookLoginButton,
+  SelectItem,
 };
