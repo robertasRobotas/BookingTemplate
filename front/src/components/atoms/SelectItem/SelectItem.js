@@ -1,8 +1,11 @@
 import React from 'react';
 import './SelectItem.css';
 
+const itemsList = [];
 const selectItem = ({ item, setPreferredSports, preferredSports }) => {
-  setPreferredSports(item);
+  itemsList.push(item);
+
+  setPreferredSports(itemsList);
   console.log('preferredSports', preferredSports);
 };
 
