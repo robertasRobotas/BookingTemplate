@@ -24,7 +24,11 @@ const UserInformationForm = ({ history, location, rootModel }) => {
           </select>
 
           <div className='label'>Favorite Sports</div>
-          <SelectItemsBar items={favoriteSportInputs} />
+          <SelectItemsBar
+            items={favoriteSportInputs}
+            setPreferredSports={setPreferredSports}
+            preferredSports={preferredSports}
+          />
           <input type='submit' value='Submit' />
         </form>
       </div>
