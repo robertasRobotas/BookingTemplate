@@ -1,19 +1,27 @@
 import React from 'react';
 import './SelectItem.css';
 
-const itemsList = [];
+let itemsList = [];
 const selectItem = ({ item, setPreferredSports, preferredSports }) => {
-  itemsList.push(item);
+  if (itemsList.includes(item)) {
+    itemsList = itemsList.filter((itemFromList) => itemFromList !== item);
+  } else {
+    itemsList.push(item);
+  }
 
   setPreferredSports(itemsList);
   console.log('preferredSports', preferredSports);
+};
+
+const selectCheck = (item) => {
+  return itemsList.includes(item);
 };
 
 const SelectItem = ({ item, setPreferredSports, preferredSports }) => {
   return (
     <div
       onClick={() => selectItem({ item, setPreferredSports, preferredSports })}
-      className='item'>
+      className={selectCheck(item) ? 'selectedItem' : 'notSelectedItem'}>
       {item}
     </div>
   );
