@@ -7,6 +7,11 @@ const UserInformationForm = ({ history, location, rootModel }) => {
   const [city, setCity] = useState('australia');
   const [preferredSports, setPreferredSports] = useState([]);
 
+  const submit = (e) => {
+    e.preventDefault();
+    console.log('preferredSports', preferredSports);
+  };
+
   return (
     <>
       <div className='formContainer'>
@@ -29,7 +34,9 @@ const UserInformationForm = ({ history, location, rootModel }) => {
             setPreferredSports={setPreferredSports}
             preferredSports={preferredSports}
           />
-          <input type='submit' value='Submit' />
+          <button onClick={(e) => submit(e)} className='button'>
+            Submit
+          </button>
         </form>
       </div>
     </>
