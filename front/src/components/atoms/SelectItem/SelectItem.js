@@ -2,8 +2,11 @@ import React from 'react';
 import './SelectItem.css';
 
 const selectItem = ({ item, setPreferredSports, preferredSports }) => {
-  setPreferredSports([...preferredSports, item]);
-  console.log(preferredSports);
+  if (!preferredSports.includes(item)) {
+    setPreferredSports([...preferredSports, item]);
+  } else {
+    setPreferredSports(preferredSports.filter((val) => val !== item));
+  }
 };
 
 const selectCheck = ({ item, preferredSports }) => {
