@@ -17,16 +17,18 @@ const UserInformationForm = ({ history, location, rootModel }) => {
       <div className='formContainer'>
         <form>
           <div className='label'>City</div>
-          <select
-            onChange={(event) => setCity(event.target.value)}
-            value={city}
-            id='country'
-            name='country'
-            className='selectInput'>
-            <option value='australia'>Australia</option>
-            <option value='canada'>Canada</option>
-            <option value='usa'>USA</option>
-          </select>
+          <div className='itemWrapper'>
+            <select
+              onChange={(event) => setCity(event.target.value)}
+              value={city}
+              id='country'
+              name='country'
+              className='selectInput'>
+              <option value='australia'>Australia</option>
+              <option value='canada'>Canada</option>
+              <option value='usa'>USA</option>
+            </select>
+          </div>
 
           <div className='label'>Favorite Sports</div>
           <SelectItemsBar
@@ -34,9 +36,11 @@ const UserInformationForm = ({ history, location, rootModel }) => {
             setPreferredSports={setPreferredSports}
             preferredSports={preferredSports}
           />
-          <button onClick={(e) => submit(e)} className='button'>
-            Submit
-          </button>
+          <div className='itemWrapper'>
+            <button onClick={(e) => submit(e)} className='button'>
+              Submit
+            </button>
+          </div>
         </form>
       </div>
     </>
