@@ -4,12 +4,13 @@ import './UserInformationForm.css';
 import { SelectItemsBar } from '../../organisms/';
 import { favoriteSportInputs } from './FavoriteSportInputs';
 const UserInformationForm = ({ history, location, rootModel }) => {
-  const [city, setCity] = useState('australia');
+  const [city, setCity] = useState('');
   const [preferredSports, setPreferredSports] = useState([]);
 
   const submit = (e) => {
     e.preventDefault();
     console.log('preferredSports', preferredSports);
+    console.log('city', !!city);
   };
 
   return (
@@ -24,6 +25,9 @@ const UserInformationForm = ({ history, location, rootModel }) => {
               id='country'
               name='country'
               className='selectInput'>
+              <option defaultValue hidden>
+                Choose here
+              </option>
               <option value='australia'>Australia</option>
               <option value='canada'>Canada</option>
               <option value='usa'>USA</option>
