@@ -12,7 +12,7 @@ const UserInformationForm = ({ history, location, rootModel }) => {
   const submit = (e) => {
     e.preventDefault();
     console.log('preferredSports', preferredSports);
-    console.log('city', !!city);
+    console.log('city', city);
   };
 
   return (
@@ -28,7 +28,10 @@ const UserInformationForm = ({ history, location, rootModel }) => {
             preferredSports={preferredSports}
           />
           <div className='itemWrapper'>
-            <button onClick={(e) => submit(e)} className='button'>
+            <button
+              onClick={(e) => submit(e)}
+              className='button'
+              disabled={!(!!city && preferredSports.length > 0)}>
               Submit
             </button>
           </div>
