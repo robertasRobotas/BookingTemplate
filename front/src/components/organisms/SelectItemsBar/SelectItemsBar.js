@@ -23,7 +23,10 @@ const SelectItemsBar = ({
           );
         })}
       </div>
-      <ValidationMessage message={'Suppp'} />
+      <ValidationMessage
+        message={'Select at least one preferred sport'}
+        status={preferredSports.length >= 1}
+      />
     </div>
   );
 };

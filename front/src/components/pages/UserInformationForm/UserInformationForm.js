@@ -4,6 +4,7 @@ import './UserInformationForm.css';
 import { SelectItemsBar } from '../../organisms/';
 import { favoriteSportInputs } from './FavoriteSportInputs';
 import { ValidationMessage } from '../../atoms';
+import { CountrySelection } from '../../molecules';
 const UserInformationForm = ({ history, location, rootModel }) => {
   const [city, setCity] = useState('');
   const [preferredSports, setPreferredSports] = useState([]);
@@ -19,22 +20,7 @@ const UserInformationForm = ({ history, location, rootModel }) => {
       <div className='formContainer'>
         <form>
           <div className='label'>City</div>
-          <div className='itemWrapper'>
-            <select
-              onChange={(event) => setCity(event.target.value)}
-              value={city}
-              id='country'
-              name='country'
-              className='selectInput'>
-              <option defaultValue hidden>
-                Choose here
-              </option>
-              <option value='australia'>Australia</option>
-              <option value='canada'>Canada</option>
-              <option value='usa'>USA</option>
-            </select>
-          </div>
-
+          <CountrySelection city={city} setCity={setCity} />
           <div className='label'>Favorite Sports</div>
           <SelectItemsBar
             items={favoriteSportInputs}
