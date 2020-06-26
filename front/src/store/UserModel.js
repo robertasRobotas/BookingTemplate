@@ -6,7 +6,22 @@ const User = types.model('User', {
   email: types.string,
   picture: types.string,
   city: types.maybeNull(types.string),
-  favoriteSports: types.maybeNull(types.array(types.string)),
-});
+  preferredSports: types.maybeNull(types.array(types.string)),
+}).actions((self) => ({
+    saveCityToModel({city}) {
+      self.city = city;
+    },
+    savePreferredSportsToModel({preferredSports}) {
+      self.preferredSports = preferredSports;
+    },
+    sendAditionalData() {
+      let additionalData = {
+        city: self.city,
+        preferredSports: self.preferredSports
+      }
+      console.log(additionalData);
+    },
+  }));
 
 export default User;
+

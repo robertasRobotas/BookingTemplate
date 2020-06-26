@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './CountrySelection.css';
 import { ValidationMessage } from '../../atoms';
 
-const CountrySelection = ({ history, rootModel, setCity, city }) => {
+const CountrySelection = ({  rootModel, setCity, city }) => {
   return (
     <div className='countrySelectionWrapper'>
       <select
