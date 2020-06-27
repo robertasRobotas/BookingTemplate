@@ -3,7 +3,6 @@ import { observer } from 'mobx-react';
 import './UserInformationForm.css';
 import { SelectItemsBar } from '../../organisms/';
 import { favoriteSportInputs } from './FavoriteSportInputs';
-import { ValidationMessage } from '../../atoms';
 import { CountrySelection } from '../../molecules';
 const UserInformationForm = ({ history, location, rootModel }) => {
   const [city, setCity] = useState('');

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './SelectItemsBar.css';
 import { SelectItem, ValidationMessage } from '../../atoms';
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { FacebookLoginButton, GoogleLoginButton } from '../../atoms';
-import styled from 'styled-components';
 import './Login.css';
 import Logo from '../../../assets/photos/logo.png';
 

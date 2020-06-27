@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './CountrySelection.css';
 import { ValidationMessage } from '../../atoms';
 
-const CountrySelection = ({  rootModel, setCity, city }) => {
+const CountrySelection = ({ setCity, city }) => {
   return (
     <div className='countrySelectionWrapper'>
       <select
