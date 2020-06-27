@@ -11,12 +11,11 @@ const UserInformationForm = ({ history, location, rootModel }) => {
 
   const submit = (e) => {
     e.preventDefault();
-    if(city && preferredSports.length){
-      rootModel.auth.user.saveCityToModel({city});
-      rootModel.auth.user.savePreferredSportsToModel({preferredSports});
-      rootModel.auth.user.sendAditionalData();
+    if (city && preferredSports.length) {
+      rootModel.auth.user.saveCityToModel({ city });
+      rootModel.auth.user.savePreferredSportsToModel({ preferredSports });
+      rootModel.auth.user.sendAdditionalData();
     }
-  
   };
 
   return (
