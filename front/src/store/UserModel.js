@@ -22,13 +22,11 @@ const User = types
         city: self.city,
         preferredSports: self.preferredSports,
       };
+
       try {
         yield axios.post(
           `${process.env.REACT_APP_SERVER_HOST}/api/user/addAdditionalData`,
-          additionalData,
-          {
-            withCredentials: true,
-          }
+          additionalData
         );
       } catch (error) {
         console.log(error);
