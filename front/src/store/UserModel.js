@@ -26,7 +26,10 @@ const User = types
       try {
         yield axios.post(
           `${process.env.REACT_APP_SERVER_HOST}/api/user/addAdditionalData`,
-          additionalData
+          additionalData,
+          {
+            withCredentials: true,
+          }
         );
       } catch (error) {
         console.log(error);

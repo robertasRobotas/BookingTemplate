@@ -16,8 +16,7 @@ router.get('/logout', (req, res) => {
   res.status(200).json({ text: 'loggedOut' });
 });
 
-router.post('/addAdditionalData', (req, res) => {
-  console.log(req.body);
+router.post('/addAdditionalData', isLoggedIn, (req, res) => {
   return res.status(200).json({ message: 'ok' });
 });
 
