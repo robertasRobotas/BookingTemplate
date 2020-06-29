@@ -28,6 +28,8 @@ const Auth = types
         console.log('userData', userData);
 
         self.user = {
+          city: userData.data.user.city,
+          preferredSports: userData.data.user.preferredSports,
           displayName: userData.data.user.displayName,
           id: userData.data.user.id,
           email: userData.data.user.email,
