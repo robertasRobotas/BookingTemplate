@@ -17,7 +17,10 @@ const User = types
     savePreferredSportsToModel({ preferredSports }) {
       self.preferredSports = preferredSports;
     },
-    sendAdditionalData: flow(function* sendAdditionalData({ history }) {
+    sendAdditionalData: flow(function* sendAdditionalData({
+      history,
+      linkToRedirectLater,
+    }) {
       let additionalData = {
         city: self.city,
         preferredSports: self.preferredSports,
@@ -32,7 +35,9 @@ const User = types
           }
         )
         .then(() => {
-          history.push('/');
+          linkToRedirectLater
+            ? history.push('/')
+            : history.push(`${linkToRedirectLater}`);
         })
         .catch((error) => {
           console.log(error);
