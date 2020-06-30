@@ -17,23 +17,26 @@ const User = types
     savePreferredSportsToModel({ preferredSports }) {
       self.preferredSports = preferredSports;
     },
-    sendAdditionalData: flow(function* sendAdditionalData() {
+    sendAdditionalData: flow(function* sendAdditionalData({ history }) {
       let additionalData = {
         city: self.city,
         preferredSports: self.preferredSports,
       };
 
-      try {
-        yield axios.post(
+      yield axios
+        .post(
           `${process.env.REACT_APP_SERVER_HOST}/api/user/addAdditionalData`,
           additionalData,
           {
             withCredentials: true,
           }
-        );
-      } catch (error) {
-        console.log(error);
-      }
+        )
+        .then(() => {
+          history.push('/');
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }),
   }));
 
