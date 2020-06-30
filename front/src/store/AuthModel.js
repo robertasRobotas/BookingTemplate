@@ -7,6 +7,7 @@ const Auth = types
     loggedInStatus: types.optional(types.boolean, false),
     user: types.maybeNull(UserModel),
     loading: types.optional(types.boolean, false),
+    linkToRedirectLater: types.optional(types.string, ''),
   })
   .views((self) => ({
     getDisplayName() {
@@ -72,6 +73,9 @@ const Auth = types
         self.loggedInStatus = false;
       }
     }),
+    addLinkToRedirect: ({ linkToRedirectLater }) => {
+      self.linkToRedirectLater = linkToRedirectLater;
+    },
   }));
 
 export default Auth;

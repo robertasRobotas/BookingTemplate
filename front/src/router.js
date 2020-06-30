@@ -6,6 +6,7 @@ import {
   About,
   Contact,
   UserInformationForm,
+  CompanyPage,
 } from './components/pages';
 import { Spinner } from './components/atoms';
 import history from './history';
@@ -48,6 +49,11 @@ const Routes = ({ rootModel }) => {
           <PrivateRoute
             path='/addInfo'
             component={UserInformationForm}
+            rootModel={rootModel}
+          />
+          <PrivateRoute
+            path='/registration/:sportType/:creator'
+            component={CompanyPage}
             rootModel={rootModel}
           />
         </Router>
