@@ -8,8 +8,11 @@ import GoogleLoginButton from './LoginButtons/GoogleLoginButton';
 import FacebookLoginButton from './LoginButtons/FacebookLoginButton';
 import SelectItem from './SelectItem/SelectItem';
 import ValidationMessage from './ValidationMessage/ValidationMessage';
+import Button from './Button/Button';
+
 
 export {
+  Button,
   NavigationLink,
   DropDownLink,
   Burger,
