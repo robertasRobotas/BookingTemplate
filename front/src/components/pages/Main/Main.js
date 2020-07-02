@@ -1,7 +1,10 @@
 import React from 'react';
 import Wrapper from '../../_hoc/Wrapper';
 import { observer } from 'mobx-react';
+import { MainSearch } from '../../organisms';
 import '../pages.css';
+import './Main.css';
+
 
 const Main = ({ history, location, rootModel }) => {
   if (!rootModel.auth.user.city) {
@@ -11,7 +14,8 @@ const Main = ({ history, location, rootModel }) => {
   return (
     <>
       <Wrapper history={history} rootModel={rootModel} location={location}>
-        <div className='screen'></div>
+        <div className='title'>Rask gerą meistrą</div>
+        <MainSearch/>
       </Wrapper>
     </>
   );
